@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->    
+    <head>
+        <meta charset="utf-8">
+
+<style>
+html{
+	font-size: 100%;
+} 
+
+body{
+	font-size: 1em;
+	text-align: center;
+	color: #444;
+	background: #e6e6e6;
+	padding: 0;
+	margin: 0;
+}
+
+.drop-shadow {
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: relative;
+}
+.drop-shadow:before, .drop-shadow:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+}
+.curved:before {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+.curved-hz:before {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.calendar{
+	width: 13.375em;
+	height: 13em;
+	float: left;
+	margin: 0.25em;
+	background-color:#fff;
+}
+.calendar > .avl-mheader{
+	width: 13.125em;
+	color: 1C486A;
+	padding-top:0.0625em;
+	padding-bottom:0.0625em;
+	font-weight: bold;
+	font-size: 1em;
+	text-align:center;
+	background-color: transparent;
+	height:1.0625em;	
+}
+.avl-dheader{
+	width: 29px;
+	height: 20px;
+	float: left;	
+	color: #fff;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	background-color: #000;	
+	text-align: center;
+	line-height:15px;
+	
+}
+
+.avl-day{
+	width: 29px;
+	height: 26px;
+	float: left;
+	color: #000;
+	border-left: 1px solid #FFF;	
+	border-bottom: 1px solid #FFF;
+	background-color: #67AE20;
+	font-weight: normal;
+	font-size: 13px;
+	vertical-align: middle;
+
+}
+.avl-day:hover{
+	cursor: pointer;
+	opacity:0.9;
+	filter:alpha(opacity=90); 
+	background-color:#FFEA00;
+	font-weight:bold;
+}
+.avl-day div{
+	height: 14px;
+	margin: 6px 0px 0px 0px;
+	background-color: transparent;
+	text-align: center;
+	color: #111;
+}
+.avl-inactive_day{
+	background-color: #FFFFFF;
+}
+
+
+.avl-day .avl-available{
+	background-color: #C5E0B7;
+}
+.avl-day_booked{
+	background-color: #e95c5c;
+}
+.avl-day-beggining-booked{
+	background:url('/img/cal/diag-last.png') no-repeat;
+	background-color: transparent;
+	background-size: 29px 26px;
+}
+.avl-day-beggining-booked-selected{
+	background-image:url('/img/cal/diag-last-selected.png');
+	background-size: 29px 26px;	
+}
+
+.avl-day-end-booked{
+	background:url('/img/cal/diag-first.png') no-repeat;
+	background-color: transparent;
+	background-size: 29px 26px;	
+}
+.avl-day-end-booked-selected{
+	background-image:url('/img/cal/diag-first-selected.png');
+	background-size: 29px 26px;	
+}
+.avl-day-selected{
+	background-color:#FFEA00;
+}
+
+.avl-day-selectedX{
+	background-color:#FFEA00;
+}
+
+.avl-day-selected-end{
+	background:url('/img/cal/selected_end.jpg');
+	
+}
+.avl-day-selected-beg{
+	background:url('/img/cal/selected_beg.jpg');
+	
+}
+	
+</style>
+</head>
+<body>
+		<div class="calendar drop-shadow curved curved-hz">
+			<div class="avl-mheader">October - 2012</div>
+			<div class="nothing" style="display:none">2012-10</div>
+			<div class="avl-dheader avl-dheaderFirst">S</div>
+			<div class="avl-dheader">M</div>
+			<div class="avl-dheader">T</div>
+			<div class="avl-dheader">W</div>
+			<div class="avl-dheader">T</div>
+			<div class="avl-dheader">F</div>
+			<div class="avl-dheader">S</div>
+			<div class="avl-day avl-inactive_day"><div> </div></div>
+			<div id="1avlday" class="avl-day"><div>1</div></div>
+			<div id="2avlday" class="avl-day"><div>2</div></div>
+			<div id="3avlday" class="avl-day"><div>3</div></div>
+			<div id="4avlday" class="avl-day"><div>4</div></div>
+			<div id="5avlday" class="avl-day"><div>5</div></div>
+			<div id="6avlday" class="avl-day avl-dayLast"><div>6</div></div>
+			<div id="7avlday" class="avl-day"><div>7</div></div>
+			<div id="8avlday" class="avl-day"><div>8</div></div>
+			<div id="9avlday" class="avl-day"><div>9</div></div>
+			<div id="10avlday" class="avl-day"><div>10</div></div>
+			<div id="11avlday" class="avl-day"><div>11</div></div>
+			<div id="12avlday" class="avl-day"><div>12</div></div>
+			<div id="13avlday" class="avl-day avl-dayLast"><div>13</div></div>
+			<div id="14avlday" class="avl-day"><div>14</div></div>
+			<div id="15avlday" class="avl-day"><div>15</div></div>
+			<div id="16avlday" class="avl-day"><div>16</div></div>
+			<div id="17avlday" class="avl-day"><div>17</div></div>
+			<div id="18avlday" class="avl-day"><div>18</div></div>
+			<div id="19avlday" class="avl-day"><div>19</div></div>
+			<div id="20avlday" class="avl-day avl-dayLast"><div>20</div></div>
+			<div id="21avlday" class="avl-day"><div>21</div></div>
+			<div id="22avlday" class="avl-day"><div>22</div></div>
+			<div id="23avlday" class="avl-day"><div>23</div></div>
+			<div id="24avlday" class="avl-day"><div>24</div></div>
+			<div id="25avlday" class="avl-day avl-day-end-booked-selected"><div>25</div></div>
+			<div id="26avlday" class="avl-day avl-day-selected"><div>26</div></div>
+			<div id="27avlday" class="avl-day avl-dayLast avl-day-selected"><div>27</div></div>
+			<div id="28avlday" class="avl-day avl-day-selected"><div>28</div></div>
+			<div id="29avlday" class="avl-day avl-day-selected"><div>29</div></div>
+			<div id="30avlday" class="avl-day avl-day-selected"><div>30</div></div>
+			<div id="31avlday" class="avl-day avl-day-selected"><div>31</div></div>
+			<div class="avl-day avl-inactive_day">
+				<div></div>
+			</div>
+			<div class="avl-day avl-inactive_day">
+				<div>
+				</div>
+			</div>
+			<div class="avl-day avl-dayLast avl-inactive_day">
+				<div>
+				</div>
+			</div>
+		</div>
+		
+</body>

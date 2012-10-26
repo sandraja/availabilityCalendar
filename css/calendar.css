@@ -1,0 +1,142 @@
+#cal_holder{
+	margin-left:12px;
+}
+.avl-calendar{
+	width: 214px;
+	height: 208px;
+	float: left;
+	margin: 4px;
+	background-color:#fff;
+}
+.avl-mheader{
+	width: 210px;
+	color: 1C486A;
+	padding-top:1px;padding-bottom:1px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align:center;
+	background-color: transparent;
+	height:17px;	
+}
+.avl-dheader{
+	width: 29px;
+	height: 20px;
+	float: left;	
+	color: #fff;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	background-color: #000;	
+	text-align: center;
+	line-height:15px;
+	
+}
+
+.avl-day{
+	width: 29px;
+	height: 26px;
+	float: left;
+	color: #000;
+	border-left: 1px solid #FFF;	
+	border-bottom: 1px solid #FFF;
+	background-color: #67AE20;
+	font-weight: normal;
+	font-size: 13px;
+	vertical-align: middle;
+
+}
+.avl-day:hover{
+	cursor: pointer;
+	opacity:0.9;
+	filter:alpha(opacity=90); 
+	background-color:#FFEA00;
+	font-weight:bold;
+}
+.avl-day div{
+	height: 14px;
+	margin: 6px 0px 0px 0px;
+	background-color: transparent;
+	text-align: center;
+	color: #111;
+}
+.avl-inactive_day{
+	background-color: #FFFFFF;
+}
+.avl-dayFirst{
+	border-left: 0px;
+}
+.avl-dayLast{
+	border-right: 0px solid #eee;
+}
+.avl-dHeaderLast{
+	border-right: 1px solid #fff;
+}
+
+.avl-day .avl-available{
+	background-color: #C5E0B7;
+}
+.avl-day_booked{
+	background-color: #e95c5c;
+}
+.avl-day-beggining-booked{
+	background:url('/img/cal/diag-last.png') no-repeat;
+	background-color: transparent;
+	background-size: 29px 26px;
+}
+.avl-day-beggining-booked-selected{
+	background-image:url('/img/cal/diag-last-selected.png');
+	background-size: 29px 26px;	
+}
+
+.avl-day-end-booked{
+	background:url('/img/cal/diag-first.png') no-repeat;
+	background-color: transparent;
+	background-size: 29px 26px;	
+}
+.avl-day-end-booked-selected{
+	background-image:url('/img/cal/diag-first-selected.png');
+	background-size: 29px 26px;	
+}
+
+#avl-loading{
+	background:url(/img/cal/loading12.gif) no-repeat center center;
+	height:100px;
+	width: 100px;
+	display:none;
+	left:41%;
+	top:50%;
+	z-index: 1000;
+	margin: 0px 0px 0px 0px;
+	position:fixed;
+
+}
+
+#avl-loading2{
+	background-image:url(/img/cal/loading12.gif) no-repeat center center;
+	height:100%;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	display:none;
+	left:0;
+	top:0;
+	z-index: 100000;
+	margin: 0px 0px 0px 0px;
+	position:fixed;
+
+}
+.avl-day-selected{
+	background-color:#FFEA00;
+	
+}
+.avl-day-selectedX{
+	background-color:#FFEA00;
+}
+
+.avl-day-selected-end{
+	background:url('/img/cal/selected_end.jpg');
+	
+}
+.avl-day-selected-beg{
+	background:url('/img/cal/selected_beg.jpg');
+	
+}
